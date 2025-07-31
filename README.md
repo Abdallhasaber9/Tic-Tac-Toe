@@ -1,34 +1,32 @@
 # Tic-Tac-Toe
-📌 فكرة اللعبة:
-لعبة شهيرة تلعب بين لاعبين بالتناوب، حيث يحاول كل لاعب تكوين صف أفقي أو عمودي أو قطري مكون من رمزه ("X" أو "O") على لوحة بحجم 3×3.
+🎮 Tic Tac Toe Game (X-O)
+📌 Game Idea:
+A classic 2-player game where each player takes turns placing their symbol ("X" or "O") on a 3×3 board, trying to form a row of three matching symbols horizontally, vertically, or diagonally.
 
-🧠 طريقة اللعب:
-اللاعبان يتناوبان الأدوار.
+🧠 How to Play:
+The game is played on a 3x3 grid.
 
-كل لاعب يدخل إحداثيات الصف والعمود (0 إلى 2) ليضع رمزه في الخلية المحددة.
+Players take turns entering two numbers: the row and column (from 0 to 2).
 
-إذا كانت الخلية مشغولة أو الإحداثيات غير صحيحة، يتم طلب إدخال جديد.
+If the selected cell is already occupied or the input is invalid → the player is asked to enter again.
 
-تنتهي اللعبة إذا:
+🎯 Game End Conditions:
+A player gets 3 symbols in a row → Win.
 
-أحد اللاعبين حصل على 3 رموز متتالية (أفقي، عمودي، قطري) ➜ فوز.
+The board is full with no winner → Draw.
 
-امتلأت جميع الخانات بدون فائز ➜ تعادل.
+🧩 Function Descriptions:
+Function	Purpose
+print_board(board)	Displays the current board in a nice format
+check_winner(board, player)	Checks if the current player has won
+is_full(board)	Checks if all cells are filled (draw)
+play_game()	Runs the full game loop: input, turn-switching, and win/draw check
 
-🧩 شرح الدوال في الكود:
-الدالة	الوظيفة
-                                                                                                                      print_board(board)	طباعة شكل اللوحة الحالي بتنسيق مرتب
-                                                                                                           check_winner(board, player)	التحقق مما إذا كان اللاعب الحالي قد فاز
-                                                                                                                  is_full(board)	التحقق مما إذا كانت جميع الخانات ممتلئة (تعادل)
-                                                                                                         play_game()	تشغيل اللعبة كاملة: قراءة المدخلات وتبديل الأدوار والتحقق من النتيجة
-                            
-  
-✅ مميزات اللعبة:
-دعم تبادل الأدوار بين اللاعبين.
+✅ Game Features:
+Turn-based play between two players (X and O).
 
-الكشف عن الفائز تلقائيًا.
+Automatic win and draw detection.
 
-رسائل توضيحية في حالة الخطأ أو التكرار أو الفوز/التعادل.
+Clear error messages for invalid or duplicate moves.
 
-سهلة التعديل والإضافة (مثل الذكاء الصناعي لاحقًا).
-
+Easy to expand (e.g., add AI in the future).
